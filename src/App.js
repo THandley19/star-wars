@@ -1,10 +1,10 @@
 import "./App.css";
-import UserCharacter from "./compoments/User-Character/index";
+import CharacterSelect from "./compoments/Character-Selection/index";
 
 function App() {
   return (
     <div className="App">
-      <UserCharacter />
+      <CharacterSelect />
     </div>
   );
 }
