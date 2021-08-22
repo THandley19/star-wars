@@ -1,10 +1,18 @@
 import "./App.css";
-import CharacterSelect from "./compoments/Character-Selection/index";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import CharacterSelect from "./compoments/Character-Selection/";
+import CharacterBattle from "./compoments/Character-Battle";
 
 function App() {
   return (
     <div className="App">
-      <CharacterSelect />
+      <Router>
+        <Switch>
+          <Route exact path="/" component={CharacterSelect} />
+          <Route path="/character-battle" component={CharacterBattle} />
+        </Switch>
+      </Router>
     </div>
   );
 }
